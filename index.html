@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Para Bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!--Para Bootstrap-->
+    <link rel="stylesheet" href="css/styles.css"> <!--Para sobreescribir Bootstrap-->
+    <!--Font from Google.com/fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!-- Logo Clickleable -->
+                    <a href="index.html" class="float-start d-none d-md-block d-lg-block">
+                        <div id="logo-img"></div>
+                    </a>
+
+                    <div class="navbar-brand float-start">
+                        <a href="index.html">
+                            <h1>Scuderia Ferrari</h1>
+                        </a>
+                        <p>
+                            <img src="images/MCD.png" alt="Kosher certification">
+                            <span>Kosher Certified</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- Toggle, boton desplegable -->
+                <button id="navbarToggle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsable-nav" aria-controls="toggleMobileMenu" 
+                aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menu desplegable -->
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+                    <!-- me-auto es para la izquierda, y ms-auto es pa la derecha -->
+                    <ul id="nav-list" class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item d-lg-none d-xl-none d-xll-none">
+                            <a class="nav-link active prueba" aria-current="page" href="index.html">
+                                <!-- Este svg permite poner logos o iconos de bootstrap -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                                <br class="hidden-xs">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active prueba" aria-current="page" href="#" onclick="$dc.loadMenuCategories();">
+                                <!-- Este svg permite poner logos o iconos de bootstrap -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                                <br class="hidden-xs">
+                                Menu
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active prueba" aria-current="page" href="#">
+                                <!-- Este svg permite poner logos o iconos de bootstrap -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                                <br class="hidden-xs">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active prueba" aria-current="page" href="#">
+                                <!-- Este svg permite poner logos o iconos de bootstrap -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+                                    <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                </svg>
+                                <br class="hidden-xs">
+                                Awards
+                            </a>
+                        </li>
+                        <li id="phone" class="nav-item hidden-xs">
+                            <a class="nav-link active" aria-current="page" href="tel:410-602-5008">
+                                <span>410-602-5008</span>
+                            </a>
+                            <div>
+                                *We Deliver
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>    
+            </div>
+        </nav>
+    </header>
+
+    <div id="main-content" class="container"></div> <!-- End of #main-content -->
+
+    <footer class="panel-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Al yo poner col-sm-4 digo que para screen sizes small hasta exta large que haga esa
+                configuración para visualizar las 3 secciones en una linea, sin embargo si es extra small
+                ya no toma eso en cuenta y ejecuta el codigo normal haciendo que cada dtexto este en una 
+                linea diferente -->
+                <section id="hours" class="col-sm-4">
+                    <span>Hours:</span><br>
+                    Sun-Thurs: 11:15am - 10:00pm<br>
+                    Fri: 11:15am - 2:30pm <br>
+                    Saturday Closed
+                    <hr class="d-block d-sm-none">
+                </section>
+                <section id="address" class="col-sm-4">
+                    <span>Address:</span><br>
+                    Avenida La Encalada 165<br>
+                    Santiago de Surco, Cuadra 1<br>
+                    <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+                    <hr class="d-block d-sm-none">
+                </section>
+                <section id="testimonials" class="col-sm-4">
+                    <p>"The best Chinese restaurant I've been to!"</p>
+                    <p>"Amazing food! Great service! I'll be back again and again!"</p>
+                </section>
+            </div>
+        </div>
+        <div class="text-center">
+            &copy; Copyright Scuderia Ferrari
+        </div>
+    </footer>
+
+    <!--Esto debe ir al final-->
+    <script src="js/jquery.js"></script> <!--Para Bootstrap-->
+    <script src="js/bootstrap.min.js"></script> <!--Para Bootstrap-->
+    <script src="js/ajax-utils.js"></script> <!--Siempre que use Ajax, uso este script-->
+    <script src="js/script.js"></script>
+</body>
+</html>
